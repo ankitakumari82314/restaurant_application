@@ -1,0 +1,14 @@
+<div class="margin">
+    <h1>Menu List</h1>
+    
+    <ul *ngIf="menu.length; else noMenu">
+        <li *ngFor="let item of menu">
+            Food:{{item.foodName}}<br>
+           <button (click)="deleteMenuItem(item.id)">Delete</button>
+           <button (click)="updateMenuItem(item)">Edit</button>
+        </li>
+    </ul>
+    <ng-template #noMenu>
+        No Menu available
+    </ng-template>
+</div>

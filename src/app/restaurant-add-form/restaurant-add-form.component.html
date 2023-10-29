@@ -1,0 +1,9 @@
+<div class="margin">
+    <form [formGroup]="restaurantAddForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>Restaurant name</label>
+            <input type="text" formControlName="restaurantName">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
